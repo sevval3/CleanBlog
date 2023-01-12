@@ -18,12 +18,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1> <%= post.title %></h1>
-            <h2 class="subheading"> <%= post.detail.substring(0,25) %>...</h2>
-            <span class="meta">Posted by
-              <a href="/">Sevval Oztekin</a>
-              <%= post.createDate.toString().substring(0,21) %>
-            </span>
+            
  
           </div>
         </div>
@@ -31,21 +26,28 @@
     </div>
   </header>
   <!-- Post Content -->
+ 
   <article>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <%= post.detail %>
+          <h1> <%= post.title %></h1>
+            <h2 class="subheading"> <%= post.detail.substring(0,25) %></h2>
+            <span class="meta">Posted by
+              <a href="/">Sevval Oztekin</a>
+              <%= post.createDate.toString().substring(0,21) %>
+            </span>
+        
         </div>
         <span class="meta">
-          <a href="/delete/<%= post.id %>?_method=DELETE"  onclick="return  confirm('ARE YOU SURE?')" class="btn border">Delete ❌ </a>
-          <a href="/edit_post/<%= post.id %>" class="btn border">Edit ✍</a>
+          
         </span>
       </div>
     </div>
   </article>
 
   <hr>
+  
 
 <!-- Footer -->
 <%- include('partials/_footer') -%>
